@@ -2,8 +2,6 @@
 # Introduction
 This report covers cracking passwords of three (3) locked PDF files with multiple password cracking tools. One module covers getting the hashes of these PDF and another covers Using the password cracker tool. Together, it shows how to use these tools to open a PDF without directly inserting their passwords.  All activities were run on Windows PC with. Every step below includes the exact tool used, the result I observed, and a screenshot as evidence.
 
-# Objective: 
-Extract and crack the cryptographic hash of a password-protected PDF document using an offline, signature-based recovery method.
 
 # Tools Used
 The table below lists each tool used in this report and its purpose.
@@ -16,6 +14,7 @@ The table below lists each tool used in this report and its purpose.
 # Offline Password Recovery via John the Ripper (JtR) (WK3 PM1)
 # Objective: 
 Extract and crack the cryptographic hash of a password-protected PDF document using an offline, signature-based recovery method.
+
 STEP 1 - Environment Setup: Downloaded John the Ripper (JtR) along with the Johnny Graphical User Interface (GUI) from the official repository. Installed the packages and configured the necessary path dependencies.
 
 STEP 2 - Hash Extraction: Launched the PDF Hash Extractor utility, uploaded the target encrypted PDF file, and isolated its cryptographic hash.
@@ -38,6 +37,15 @@ STEP 3 - Cryptanalysis: Copied the complete hash string and transitioned to the 
 
 STEP 4 - Verification: The cloud utility successfully recovered the plaintext passphrase. The retrieved credentials were then entered into the locked PDF document to successfully grant authenticated access.
 
-# ISSUES I ENCOUNTERED
+# ISSUES I ENCOUNTERED AND STEPS I TOOK TO REMEDY IT
+
+Exception Handling: The initial recovery attempt using the web-based Networkwalks Password Cracker failed to yield the plaintext password, indicating the passphrase was outside the tool's default keyspace.
+
+Wordlist Sourcing: I downloaded a series of comprehensive, specialized wordlists (dictionaries) to expand the attack parameters.
+
+Sequential Execution: I ran the cryptographic hash against each downloaded wordlist file sequentially.
+
+Resolution & Verification: The plaintext password was successfully recovered after cycling through the targeted dictionaries. The retrieved credentials were then applied to the locked PDF document to successfully grant authenticated access.
+
 
 
