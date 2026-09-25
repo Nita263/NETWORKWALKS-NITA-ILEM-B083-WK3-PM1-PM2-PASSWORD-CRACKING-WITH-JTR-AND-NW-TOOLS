@@ -1,4 +1,4 @@
-# Password cracking with John The Ripper(JtR) and Networkwalks Tools (Hash Calculator and Password cracker) 
+# Password cracking with John The Ripper(JtR) and Networkwalks Tools (Web based Hash Calculator and Password cracker) 
 
 # Introduction
 This report covers password cracking of three (3) locked PDF files, using multiple password cracking tools. This report includes the process of getting the hashes of these locked PDF files and successfully gaining access by cracking their passwods with a password cracker tool. All activities were run on Windows PC and web browser. 
@@ -45,7 +45,7 @@ STEP 3 - Cryptanalysis: Copied the complete hash string and transitioned to the 
 
 STEP 4 - Verification: The cloud utility successfully recovered the plaintext passphrase. The retrieved credentials were then entered into the locked PDF document to successfully grant authenticated access.
 
-# ISSUES I ENCOUNTERED AND STEPS I TOOK TO REMEDY IT
+# ISSUES I ENCOUNTERED AND STEPS I TOOK TO FIX IT
 
 The initial recovery attempt using the web-based Networkwalks Password Cracker failed to yield the plaintext password, indicating the passphrase was outside the tool's default keyspace.
 I did the following: 
