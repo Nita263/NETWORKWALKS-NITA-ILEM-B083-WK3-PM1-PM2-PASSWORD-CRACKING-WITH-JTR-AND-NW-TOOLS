@@ -9,7 +9,7 @@ I have also stated the issues I encountered and how I solved the problem. I also
 The table below lists each tool used in this report and its purpose.
 | Tools | Purpose |
 | :---- | :---- |
-| John The Ripper(JtR) | Üpen-source password-cracking tool that recovers passwords from
+| John The Ripper(JtR) | Üpen-source password-cracking tool that recovers passwords from <br>
 hashes |
 
 # Activities Performed
