@@ -4,9 +4,9 @@ This report covers cracking passwords of three (3) locked PDF files with multipl
 
 3. Tools Used
 The table below lists each tool used in this report and its purpose.
-Tools Purpose
-| :----- :-----
-| Johnny The Ripper(JTR) 
+| Tools | Purpose |
+| :----- | :----- |
+| Johnny The Ripper(JTR) | open-source password cracking and security auditing tool primarily used by cybersecurity professionals, systems administrators, and penetration testers |
 
 Tools	Purpose
 Kali Linux & Windows	Operating systems used for reconnaissance activities.
