@@ -1,36 +1,43 @@
-# Password cracking with Johnny The Ripper(JtR) and Networkwalks Tools (Hash Calculator and Password cracker) 
+# Password cracking with John The Ripper(JtR) and Networkwalks Tools (Hash Calculator and Password cracker) 
 # Introduction
 This report covers cracking passwords of three (3) locked PDF files with multiple password cracking tools. One module covers getting the hashes of these PDF and another covers Using the password cracker tool. Together, it shows how to use these tools to open a PDF without directly inserting their passwords.  All activities were run on Windows PC with. Every step below includes the exact tool used, the result I observed, and a screenshot as evidence.
 
-3. Tools Used
+# Objective: 
+Extract and crack the cryptographic hash of a password-protected PDF document using an offline, signature-based recovery method.
+
+# Tools Used
 The table below lists each tool used in this report and its purpose.
 | Tools | Purpose |
 | :---- | :---- |
 | Johnny The Ripper(JtR) | open-source password cracking and security auditing tool primarily used by cybersecurity professionals, '<br>' systems administrators and penetration testers |
 
-Tools	Purpose
-Kali Linux & Windows	Operating systems used for reconnaissance activities.
-WHOIS	Query public domain registration (name, owner, date, server).
-Whatweb	Fingerprint technologies running on the website (frameworks, servers CMS, plugins, IP).
-nslookup	Resolve domain name to it´s IP address usimg DNS.
-curl -I	Read HTTP response headers to see the server banner, status, cookies and redirects.
-Wafw00f	Detects if a Web Application Firewall is protecting the site.
-dnsrecon	Enumerates all DNS records (Mail servers, SPF, TXT SRV).
-Zenmap (Nmap GUI)	Scan the local subnet to find live hosts, IPs and MAC addresses.
-Windows CMD	Local IP and MAC address identification
-4. Activities Performed
-4.1 Footprinting & Reconnaissance
+# Activities Performed
 
-I performed reconnaissance against the networkwalks.com domain using six Kali Linux tools: WHOIS, WhatWeb, Nslookup, Curl, Wafw00f and DNSRecon. Each tool was used to collect a different type of information about the target.
+# Offline Password Recovery via John the Ripper (JtR) (WK3 PM1)
+# Objective: 
+Extract and crack the cryptographic hash of a password-protected PDF document using an offline, signature-based recovery method.
+STEP 1 - Environment Setup: Downloaded John the Ripper (JtR) along with the Johnny Graphical User Interface (GUI) from the official repository. Installed the packages and configured the necessary path dependencies.
 
-First, I used WHOIS to obtain publicly available domain registration information and identify the domain’s name servers. The results provided information about the domain registration and hosting infrastructure.
+STEP 2 - Hash Extraction: Launched the PDF Hash Extractor utility, uploaded the target encrypted PDF file, and isolated its cryptographic hash.
 
-I then used WhatWeb to identify technologies used by the website. The results identified WordPress 7.1 and WP Download Manager 3.3.58, along with other information exposed by the website.
+STEP 3 - Data Staging: Copied the generated hash string into a text document and saved it locally for ingestion.
 
-Using Nslookup, I resolved the domain name to its IP address. The provided result identified 192.232.216.135.
+STEP 4 - Attack Execution: Opened the Johnny GUI, selected "Open Password File," and imported the target hash. Initiated a signature-based recovery attack ("Start New Attack").
 
-I used Curl with the -I option to inspect the HTTP response headers. This provided additional information about the web application and exposed the WordPress REST API endpoint /wp-json/.
+STEP 5 - Verification: Upon successful recovery of the plaintext password, the credentials were used to decrypt and open the PDF file.
 
-Next, I used Wafw00f to determine whether a Web Application Firewall was protecting the website. The result showed that the site seemed to be behind a WAF or some sort of security solution.
+# Browser-Based Password Recovery via Networkwalks Tools (WK3 PM2)
+# Objective: 
+Perform web-based cryptographic hash extraction and cloud-assisted password recovery on a secured PDF file.
 
-Finally, I used DNSRecon to enumerate DNS records. The results provided information relating to name servers (Hostgator.com), mail servers, SPF/TXT records, service records and DNS software information.
+STEP 1 - Target Ingestion: Downloaded the encrypted PDF file and navigated to the online Networkwalks Hash Calculator via a secure web browser.
+
+STEP 2 - Hash Generation: Uploaded the locked PDF document to the platform to parse the file structure and calculate the corresponding hash value.
+
+STEP 3 - Cryptanalysis: Copied the complete hash string and transitioned to the Networkwalks Password Cracker web application. Pasted the cryptographic hash into the parsing interface and executed the cracking routine.
+
+STEP 4 - Verification: The cloud utility successfully recovered the plaintext passphrase. The retrieved credentials were then entered into the locked PDF document to successfully grant authenticated access.
+
+# ISSUES I ENCOUNTERED
+
+
