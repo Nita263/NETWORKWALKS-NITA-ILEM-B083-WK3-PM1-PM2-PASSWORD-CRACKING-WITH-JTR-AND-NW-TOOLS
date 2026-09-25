@@ -1,4 +1,4 @@
-# Password cracking with Johnny The Ripper(JTR) and Networkwalks Tools (Hash Calculator and Password cracker) 
+# Password cracking with Johnny The Ripper(JtR) and Networkwalks Tools (Hash Calculator and Password cracker) 
 # Introduction
 This report covers cracking passwords of three (3) locked PDF files with multiple password cracking tools. One module covers getting the hashes of these PDF and another covers Using the password cracker tool. Together, it shows how to use these tools to open a PDF without directly inserting their passwords.  All activities were run on Windows PC with. Every step below includes the exact tool used, the result I observed, and a screenshot as evidence.
 
@@ -6,7 +6,7 @@ This report covers cracking passwords of three (3) locked PDF files with multipl
 The table below lists each tool used in this report and its purpose.
 | Tools | Purpose |
 | :----- | :----- |
-| Johnny The Ripper(JTR) | open-source password cracking and security auditing tool primarily used by cybersecurity professionals, systems administrators, and penetration testers |
+| Johnny The Ripper(JtR) | open-source password cracking and security auditing tool primarily used by cybersecurity professionals, systems administrators <br> and penetration testers |
 
 Tools	Purpose
 Kali Linux & Windows	Operating systems used for reconnaissance activities.
