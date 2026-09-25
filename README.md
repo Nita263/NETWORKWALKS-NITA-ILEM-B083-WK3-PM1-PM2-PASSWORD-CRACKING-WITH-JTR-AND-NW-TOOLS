@@ -7,10 +7,14 @@ I have also stated the issues I encountered and how I solved the problem. I also
 
 # Tools Used
 The table below lists each tool used in this report and its purpose.
-| Tools | Purpose |
+| Tools | What they do |
 | :---- | :---- |
-| John The Ripper(JtR) | An offline open-source password-cracking tool that recovers passwords from <br> hashes |
-| 
+| John The Ripper(JtR) | An offline open-source password-cracking tool that recovers passwords from  hashes |
+| Johnny GUI |  Cross-platform graphical user interface (GUI) for the popular command-line password cracking tool, John the Ripper. |
+| PDF Hash Extractor | Reads a PDF file and generates a unique cryptographic signature (a hash) from it |
+| Networkwalks Hash calculator | Computes cryptographic hash values instantly. |
+| NW Password cracker | Browser based Networkwalks tool that crackes encrypted passwords. |
+
 
 # Activities Performed
 
