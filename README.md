@@ -57,7 +57,10 @@ I did the following:
 3 Resolution & Verification: The plaintext password was successfully recovered after cycling through the targeted dictionaries. The retrieved credentials were then applied to the locked PDF document to successfully grant authenticated access.
 
 
-Nita Ilem
+
+
+
+Author: Nita Ilem
 
 Cybersecurity Intern at Networkwalks
 
