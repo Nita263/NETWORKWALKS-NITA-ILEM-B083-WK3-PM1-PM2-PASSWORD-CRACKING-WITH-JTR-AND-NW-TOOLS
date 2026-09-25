@@ -1,4 +1,5 @@
 # Password cracking with John The Ripper(JtR) and Networkwalks Tools (Hash Calculator and Password cracker) 
+
 # Introduction
 This report covers password cracking of three (3) locked PDF files, using multiple password cracking tools. This report includes the process of getting the hashes of these locked PDF files and successfully gaining access by cracking their passwods with a password cracker tool. All activities were run on Windows PC and web browser. 
 I have properly documented below every step I took, including the exact tools used, the process and the results achieved. 
@@ -7,7 +8,7 @@ I have also stated the issues I encountered and how I solved the problem. I also
 
 # Tools Used
 The table below lists each tool used in this report and its purpose.
-| Tools | What they do |
+| Tools | Purpose |
 | :---- | :---- |
 | John The Ripper(JtR) | An offline open-source password-cracking tool that recovers passwords from  hashes |
 | Johnny GUI |  Cross-platform graphical user interface (GUI) for the popular command-line password cracking tool, John the Ripper. |
@@ -46,13 +47,17 @@ STEP 4 - Verification: The cloud utility successfully recovered the plaintext pa
 
 # ISSUES I ENCOUNTERED AND STEPS I TOOK TO REMEDY IT
 
-Exception Handling: The initial recovery attempt using the web-based Networkwalks Password Cracker failed to yield the plaintext password, indicating the passphrase was outside the tool's default keyspace.
+The initial recovery attempt using the web-based Networkwalks Password Cracker failed to yield the plaintext password, indicating the passphrase was outside the tool's default keyspace.
+I did the following: 
 
-Wordlist Sourcing: I downloaded a series of comprehensive, specialized wordlists (dictionaries) to expand the attack parameters.
+1 Wordlist Sourcing: I downloaded a series of comprehensive, specialized wordlists (dictionaries) to expand the attack parameters.
 
-Sequential Execution: I ran the cryptographic hash against each downloaded wordlist file sequentially.
+2 Sequential Execution: I ran the cryptographic hash against each downloaded wordlist file sequentially.
 
-Resolution & Verification: The plaintext password was successfully recovered after cycling through the targeted dictionaries. The retrieved credentials were then applied to the locked PDF document to successfully grant authenticated access.
+3 Resolution & Verification: The plaintext password was successfully recovered after cycling through the targeted dictionaries. The retrieved credentials were then applied to the locked PDF document to successfully grant authenticated access.
 
 
+Nita Ilem
+Cybersecurity Intern at Networkwalks
 
+LinkedIn: https://www.linkedin.com/in/Nita-Ilem
